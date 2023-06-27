@@ -64,4 +64,8 @@ dependencies {
     // Autenticacion con google
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
 
+
+    // Autenticacion con facebook
+    implementation 'com.facebook.android:facebook-login:latest.release'
+
 }

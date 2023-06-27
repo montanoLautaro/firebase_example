@@ -87,13 +87,12 @@
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginHorizontal="10dp"
-
             android:backgroundTint="@android:color/holo_orange_light"
             android:text="Ingresar"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/btnSignUp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <Button
@@ -112,21 +111,20 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnGoogle"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
             app:cardBackgroundColor="@android:color/background_light"
             app:cardCornerRadius="6dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnFacebook"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnSignUp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="10dp">
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -141,6 +139,82 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="Google"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@android:color/background_light"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintEnd_toStartOf="@id/btnOtro"
+            app:layout_constraintStart_toEndOf="@id/btnGoogle"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_facebook"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Facebook"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnOtro"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@android:color/background_light"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnFacebook"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_facebook"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Otro"
                     android:textColor="@color/black"
                     android:textSize="18dp" />
 

@@ -58,5 +58,6 @@ class HomeActivity : AppCompatActivity() {
 
 enum class ProviderType {
     BASIC,
-    GOOGLE
+    GOOGLE,
+    FACEBOOK
 }
