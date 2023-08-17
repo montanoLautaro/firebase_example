@@ -1,15 +1,16 @@
 package com.example.firebasetutorial
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.firebasetutorial.databinding.ActivityHomeBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class HomeActivity : AppCompatActivity() {
 
-
+    private val db = FirebaseFirestore.getInstance()
 
     private lateinit var binding: ActivityHomeBinding
 
@@ -39,13 +40,19 @@ class HomeActivity : AppCompatActivity() {
     private fun initListeners() {
         binding.btnLogout?.setOnClickListener {
             //borrado de datos del prefs
-            val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+            val prefs =
+                getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
             prefs.clear()
             prefs.apply()
 
             //cerrar sesion
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
+        }
+
+
+        binding.btnSave.setOnClickListener {
+            db.collection("entertainments").document("title")
         }
     }
 

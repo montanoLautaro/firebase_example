@@ -45,8 +45,6 @@ class AuthActivity : AppCompatActivity() {
         if (email != null && provider != null) {
             navigateToHome(email, ProviderType.valueOf(provider))
         }
-
-
     }
 
     private fun setListeners() {
